@@ -1,0 +1,27 @@
+.navigation-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 25px;
+    width: auto;
+
+    & .navigation-content {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (max-width:430px) {
+    .navigation-header {
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: space-between;
+        padding: 15px 0;
+        // width: auto;
+
+        & .navigation-content {
+            // display: flex;
+            // flex-direction: row;
+        }
+    }
+}

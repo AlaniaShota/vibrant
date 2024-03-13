@@ -1,0 +1,16 @@
+.navigation-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // width: auto;
+
+    & .link {
+        display: flex;
+        margin-right: 25px;
+
+        & .link-text {
+            color: #fff;
+            font-size: 18px;
+        }
+    }
+}
