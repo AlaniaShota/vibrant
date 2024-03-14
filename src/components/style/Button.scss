@@ -4,4 +4,17 @@
     background: #fff;
     border: none;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 14px 0px;
+}
+
+.button.bgColor {
+    background-color: rgb(150, 92, 255);
+}
+
+@media(max-width:430px) {
+    .button {
+        padding: 5px 15px;
+        border-radius: 8px;
+
+    }
 }

@@ -1,0 +1,97 @@
+.clients-section {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+
+    & .clients-section-header {
+        margin: 50px 0;
+
+        & .clients-section-title {
+            font-size: 46px;
+            font-weight: 400;
+            color: #262c3b;
+        }
+    }
+
+    & .clients-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 75%;
+        justify-content: center;
+        align-items: center;
+        align-content: flex-start;
+        /* Установите выравнивание контента по верхнему краю */
+        gap: 15px;
+
+        & .client-card {
+            background-color: #ffffffd9;
+            box-shadow: 0 -1.909999966621399px 1.811519980430603px #2b304505, 0 3.0051724910736084px 5.008620738983154px #2b304509, 0 7.235297679901123px 12.058829307556152px #2b30450c, 0 24px 40px #2b304512;
+            height: 100%;
+            border-radius: 14px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            // gap: 5px;
+            padding: 30px;
+            position: relative;
+            width: 32%;
+
+
+            & .client-card-header {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+
+                & .client-card-img {
+                    // max-height: 44px;
+                    max-width: 44px;
+
+                    & .client-card-img-content {
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        // height: 100%;
+                    }
+                }
+
+                & .client-title {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+
+                    & .client-name {
+                        font-size: 16px;
+                    }
+
+                    & .client-status {
+                        font-size: 14px;
+                        opacity: 0.7;
+                    }
+                }
+            }
+
+            & .client-coments-section {
+                display: flex;
+                flex-wrap: wrap;
+                width: auto;
+
+                & .client-coments {
+                    font-size: 18px;
+                    font-weight: 400;
+                    opacity: 0.7;
+                }
+
+                & .client-secondary-coment {
+                    font-size: 18px;
+                    font-weight: 400;
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}

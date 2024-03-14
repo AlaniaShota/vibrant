@@ -24,8 +24,8 @@ export const About = () => {
           Vibrant is the best software platform to easily capture user feed back
           for your brand and products.
         </p>
-        <Button>
-          <span className="btn-text">Get for Free</span>
+        <Button bgColor="bgColor">
+          <span className="btn-text btn">Get for Free</span>
         </Button>
       </motion.div>
       <motion.div

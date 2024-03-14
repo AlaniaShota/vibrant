@@ -1,11 +1,10 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"); */
-@import "./satoshi.css";
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Satoshi Bold", serif;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
 }
 
 body {
@@ -27,6 +26,12 @@ a {
 
 .btn-text {
   font-size: 18px;
+  font-weight: 400;
+  color: rgba(44, 49, 58, 1);
+}
+
+.btn-text.btn {
+  color: rgb(255, 255, 255);
 }
 
 /* @media (min-width: 2459px) {
@@ -34,5 +39,3 @@ a {
     padding: 0 250px;
   }
 } */
-
-
