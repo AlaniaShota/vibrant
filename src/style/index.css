@@ -9,33 +9,30 @@
 }
 
 body {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to bottom,
     #403f44,
     #383640,
     #2f2c3b,
     #272437,
     #1e1b32
-  );
+  ); */
+  /* background: #0e0c16; */
 }
 
 a {
-  text-decoration: none;
-  color: #000;
+  text-decoration: none !important;
+  color: #000 !important;
 }
 
 .btn-text {
   font-size: 18px;
 }
 
-@media (min-width: 2459px) {
+/* @media (min-width: 2459px) {
   body {
     padding: 0 250px;
   }
-}
+} */
 
-@media (max-width: 450px) {
-  body {
-    padding: 0 10px;
-  }
-}
+

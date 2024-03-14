@@ -5,6 +5,7 @@
     justify-content: center;
     width: auto;
     gap: 45px;
+    background: #0e0c16;
 
 
     & .about-section-description {
@@ -77,7 +78,7 @@
     .about-section {
 
         & .about-section-description {
-            width: 50%;
+            width: 40%;
             text-align: center;
         }
 
@@ -210,5 +211,17 @@
             //     -moz-box-shadow: 7px 8px 0px 1px rgba(0, 0, 0, 0.34);
             // }
         }
+    }
+}
+
+@media (min-width: 2459px) {
+    .about-section {
+        padding: 0 250px;
+    }
+}
+
+@media (max-width: 450px) {
+    .about-section {
+        padding: 0 10px;
     }
 }

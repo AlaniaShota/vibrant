@@ -4,25 +4,19 @@ import paid from "../../../assets/img/invoicing.726e44e3.jpg";
 import user from "../../../assets/img/mIsg7QBdpgJuZAJYdalsMEbyX50.jpg";
 import { Button } from "../../../components";
 
+import { motion } from "framer-motion";
+
 import "./About.scss";
-import { useEffect, useState } from "react";
 
 export const About = () => {
-//   const [isSmallDevice, setIsSmallDevice] = useState(false);
-
-//   useEffect(() => {
-//     const handleResize = () => {
-//       setIsSmallDevice(window.innerWidth < 1024);
-//     };
-
-//     window.addEventListener("resize", handleResize);
-//     handleResize(); // вызываем для инициализации
-//     return () => window.removeEventListener("resize", handleResize);
-//   }, []);
-
   return (
-    <div className="about-section">
-      <div className="about-section-description">
+    <motion.div className="about-section">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="about-section-description"
+      >
         <h1 className="about-title">
           Open your first crypto wallet, right now!
         </h1>
@@ -33,17 +27,17 @@ export const About = () => {
         <Button>
           <span className="btn-text">Get for Free</span>
         </Button>
-      </div>
-      <div className="about-img-overview">
-        <img
-        //   src={isSmallDevice ? overviewSecond : overview}
-        src={overview}
-          alt="Overview"
-          className="overview"
-        />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="about-img-overview"
+      >
+        <img src={overview} alt="Overview" className="overview" />
         <img src={paid} alt="Error" className="paid-img" />
         <img src={user} alt="Error" className="user-img" />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
