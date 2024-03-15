@@ -2,7 +2,7 @@ import overview from "../../../assets/img/Pzrx2TCfEuPtWYzxPCANNXexA.webp";
 import overviewSecond from "../../../assets/img/Pzrx2TCfEuPtWYzxPCANNXexA.png";
 import paid from "../../../assets/img/invoicing.726e44e3.jpg";
 import user from "../../../assets/img/mIsg7QBdpgJuZAJYdalsMEbyX50.jpg";
-import { Button } from "../../../components";
+import { Button, SectionTitle } from "../../../components";
 
 import { motion } from "framer-motion";
 
@@ -15,15 +15,21 @@ export const About = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="about-section-description"
+        className="about-section-content"
       >
-        <h1 className="about-title">
+        {/* <h1 className="about-title">
           Open your first crypto wallet, right now!
         </h1>
         <p className="about-description">
           Vibrant is the best software platform to easily capture user feed back
           for your brand and products.
-        </p>
+        </p> */}
+        <SectionTitle
+          styleAbout="styleAbout"
+          sectionTitle="Open your first crypto wallet, right now!"
+          sectionDescription=" Vibrant is the best software platform to easily capture user feed back
+          for your brand and products."
+        />
         <Button bgColor="bgColor">
           <span className="btn-text btn">Get for Free</span>
         </Button>

@@ -8,7 +8,16 @@ import sixthUserImg from "../../../assets/img/bwYxT2ryzUcDi8QacTlQa8iHhIU.webp";
 import seventhUserImg from "../../../assets/img/xXIwCQFs1Nr2rdWr1ElUxM0g0.webp";
 import eightUserImg from "../../../assets/img/Omxy7ALLTI9vOgAuf9Z1XgMasZ8.webp";
 import ninthUserImg from "../../../assets/img/HUJtNVk2RvqzlxrYo11UQG49ugc.webp";
+
+import { SectionTitle } from "../../../components";
+
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 export const Clients = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
   const clientsData = [
     {
       id: 1,
@@ -32,7 +41,7 @@ export const Clients = () => {
       status: "CEO Framer",
       img: thirdUserImg,
       description:
-        "Mauris nulla ex, rutrum vitae faucibus cursus, bibendum nec arcu.",
+        "Fusce quis sapien tristique mauris tempor tristique. Donec efficitur gravida nibh, ac aliquet diam volutpat non.",
     },
     {
       id: 4,
@@ -41,6 +50,8 @@ export const Clients = () => {
       img: fourthUserImg,
       description:
         "Mauris nulla ex, rutrum vitae faucibus cursus, bibendum nec arcu.",
+      secondDescription:
+        "Vestibulum at erat ut velit egestas venenatis sit amet nec metus.",
     },
     {
       id: 5,
@@ -67,9 +78,7 @@ export const Clients = () => {
       status: "CEO Framer",
       img: seventhUserImg,
       description:
-        "Curabitur gravida placerat purus nec bibendum. Proin porttitor varius risus blandit dictum. ",
-      secondDescription:
-        "Vestibulum at erat ut velit egestas venenatis sit amet nec metus.",
+        "Morbi at metus accumsan, posuere mi quis, tempus tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
     },
     {
       id: 8,
@@ -77,7 +86,9 @@ export const Clients = () => {
       status: "CEO Framer",
       img: eightUserImg,
       description:
-        "Donec efficitur gravida nibh, ac aliquet diam volutpat non.",
+        "Curabitur gravida placerat purus nec bibendum. Proin porttitor varius risus blandit dictum. ",
+      secondDescription:
+        "Vestibulum at erat ut velit egestas venenatis sit amet nec metus.",
     },
     {
       id: 9,
@@ -89,14 +100,44 @@ export const Clients = () => {
     },
   ];
 
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.4,
+      },
+    },
+  };
+
+  const itemAnimation = {
+    hidden: { y: 80, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
-    <div className="clients-section">
-      <div className="clients-section-header">
+    <motion.div
+      ref={ref}
+      variants={container}
+      animate={inView ? "visible" : "hidden"}
+      className="clients-section"
+    >
+      {/* <div className="clients-section-header">
         <h1 className="clients-section-title">What people say</h1>
-      </div>
+      </div> */}
+      <SectionTitle sectionTitle="What people say" />
       <div className="clients-container">
         {clientsData.map((item) => (
-          <div key={item.id} className="client-card">
+          <motion.div
+            variants={itemAnimation}
+            key={item.id}
+            className="client-card"
+          >
             <div className="client-card-header">
               <div className="client-card-img">
                 <img
@@ -119,9 +160,9 @@ export const Clients = () => {
                 </p>
               ) : null}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };

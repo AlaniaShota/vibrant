@@ -1,8 +1,6 @@
 .clients-section {
-    width: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin: 50px 0;
 
@@ -17,29 +15,23 @@
     }
 
     & .clients-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
         width: 75%;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        align-content: flex-start;
-        /* Установите выравнивание контента по верхнему краю */
-        gap: 15px;
+        align-content: center;
+        gap: 10px;
+        margin-bottom: 50px;
 
         & .client-card {
+            width: auto;
+            height: max-content;
+            padding: 20px 25px;
+            max-width: calc(33.33% - 20px);
             background-color: #ffffffd9;
             box-shadow: 0 -1.909999966621399px 1.811519980430603px #2b304505, 0 3.0051724910736084px 5.008620738983154px #2b304509, 0 7.235297679901123px 12.058829307556152px #2b30450c, 0 24px 40px #2b304512;
-            height: 100%;
             border-radius: 14px;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            // gap: 5px;
-            padding: 30px;
-            position: relative;
-            width: 32%;
-
 
             & .client-card-header {
                 display: flex;
@@ -48,14 +40,14 @@
                 gap: 10px;
 
                 & .client-card-img {
-                    // max-height: 44px;
+
                     max-width: 44px;
 
                     & .client-card-img-content {
                         width: 100%;
                         object-fit: cover;
                         border-radius: 50%;
-                        // height: 100%;
+
                     }
                 }
 
@@ -81,17 +73,147 @@
                 width: auto;
 
                 & .client-coments {
-                    font-size: 18px;
-                    font-weight: 400;
+                    font-size: 16px;
+                    font-weight: 300;
                     opacity: 0.7;
                 }
 
                 & .client-secondary-coment {
-                    font-size: 18px;
-                    font-weight: 400;
+                    font-size: 16px;
+                    font-weight: 300;
                     opacity: 0.7;
+                    margin-top: 2px;
                 }
             }
         }
+    }
+
+
+}
+
+@media(min-width:2460px) {
+    .clients-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 100px 0;
+
+        & .clients-section-header {
+            margin: 50px 0;
+
+            & .clients-section-title {
+                font-size: 46px;
+                font-weight: 400;
+                color: #262c3b;
+            }
+        }
+
+        & .clients-container {
+
+            & .client-card {
+                padding: 30px;
+
+                & .client-card-header {
+                    gap: 15px;
+
+                    & .client-card-img {
+
+                        max-width: 54px;
+
+                    }
+
+                    & .client-title {
+
+
+                        & .client-name {
+                            font-size: 21px;
+                        }
+
+                        & .client-status {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                & .client-coments-section {
+
+                    & .client-coments {
+                        font-size: 17px;
+                        font-weight: 300;
+                        opacity: 0.7;
+                    }
+
+                    & .client-secondary-coment {
+                        font-size: 17px;
+                        font-weight: 300;
+                        opacity: 0.7;
+                        margin-top: 2px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media(max-width:1024px) {
+    .clients-section {
+
+        & .clients-container {
+            width: 95%;
+        }
+    }
+}
+
+
+@media(max-width:800px) {
+    .clients-section {
+
+        & .clients-container {
+            align-content: flex-start;
+
+            & .client-card {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media(max-width:430px) {
+    .clients-section {
+        margin: 10px;
+
+        & .clients-section-header {
+            margin: 20px 0;
+
+            & .clients-section-title {
+                font-size: 21px;
+
+            }
+        }
+
+        & .clients-container {
+
+            & .client-card {
+                padding: 17px 20px;
+
+                & .client-card-header {
+                    gap: 7px;
+                }
+
+                & .client-coments-section {
+
+                    & .client-secondary-coment {
+                        font-size: 16px;
+                        font-weight: 300;
+                        opacity: 0.7;
+                        margin-top: 1px;
+                    }
+                }
+            }
+        }
+
+
     }
 }
