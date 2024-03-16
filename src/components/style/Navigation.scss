@@ -1,8 +1,10 @@
+@import '../../style/variables.scss';
+
 .navigation-section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+
     // width: auto;
 
     & .link {
@@ -10,7 +12,7 @@
         margin-right: 25px;
 
         & .link-text {
-            color: #fff;
+            color: $white-color;
             font-size: 18px;
         }
     }

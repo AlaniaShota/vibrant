@@ -1,10 +1,12 @@
+@import '../../../style/variables.scss';
+
 .main-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 70px;
-    background: #fff;
+    background: $white-color;
     width: auto;
 
 
@@ -138,7 +140,7 @@
         justify-content: center;
         align-items: center;
         padding: 10px;
-        background: #fff;
+        background: $white-color;
         width: auto;
 
 

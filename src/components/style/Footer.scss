@@ -1,0 +1,26 @@
+@import '../../style/variables.scss';
+
+.navigation-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 25px;
+    // height: 20vh;
+    background: $secondary-black-color;
+}
+
+@media (max-width:800px) {
+    .navigation-footer {
+        // display: flex;
+        // flex-direction: row;
+        justify-content: center;
+        // padding: 35px 25px;
+        // height: 20vh;
+        background: $secondary-black-color;
+
+        & .navigation-content-footer {
+            display: none;
+        }
+    }
+}

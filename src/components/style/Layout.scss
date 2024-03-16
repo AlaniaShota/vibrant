@@ -1,12 +1,14 @@
+@import '../../style/variables.scss';
+
 .navigation {
-    background: #0e0c16;
+    background: $secondary-black-color;
+
 
     & .navigation-header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 25px;
-        width: auto;
         // background: #0e0c16;
 
         & .navigation-content {
@@ -25,9 +27,29 @@
 }
 
 @media (max-width:430px) {
-    .navigation {
-        & .navigation-header {
-            padding: 15px 0;
-        }
-    }
+    // .navigation {
+    //     & .navigation-header {
+    //         padding: 15px 0;
+    //     }
+    // }
+
+    // .navigation {
+    //     background: #0e0c16;
+
+    //     & .navigation-header {
+    //         display: flex;
+    //         flex-direction: row;
+    //         justify-content: center;
+    //         padding: 25px;
+    //         width: 100%;
+    //         padding: 15px 0;
+    //         // background: #0e0c16;
+
+    //         & .navigation-content {
+    //             display: flex;
+    //             flex-direction: row;
+    //             width: 100%;
+    //         }
+    //     }
+    // }
 }

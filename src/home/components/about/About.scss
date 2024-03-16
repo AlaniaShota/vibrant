@@ -1,3 +1,5 @@
+@import '../../../style/variables.scss';
+
 .about-section {
     display: flex;
     flex-direction: column;
@@ -5,7 +7,7 @@
     justify-content: center;
     width: auto;
     gap: 45px;
-    background: #0e0c16;
+    background: $secondary-black-color;
 
 
     & .about-section-content {
@@ -35,9 +37,9 @@
             right: -80px;
             // margin-left: -60px;
             width: 30%;
-            box-shadow: 7px 8px 0px 1px rgba(0, 0, 0, 0.34);
-            -webkit-box-shadow: 7px 8px 0px 1px rgba(0, 0, 0, 0.34);
-            -moz-box-shadow: 7px 8px 0px 1px rgba(0, 0, 0, 0.34);
+            box-shadow: $box-shadow-effect-img;
+            -webkit-box-shadow: $box-shadow-effect-img;
+            -moz-box-shadow: $box-shadow-effect-img;
         }
 
         & .user-img {
@@ -48,9 +50,9 @@
             left: -100px;
             // margin-left: -60px;
             width: 25%;
-            box-shadow: 7px 8px 0px 1px rgba(0, 0, 0, 0.34);
-            -webkit-box-shadow: 7px 8px 0px 1px rgba(0, 0, 0, 0.34);
-            -moz-box-shadow: 7px 8px 0px 1px rgba(0, 0, 0, 0.34);
+            box-shadow: $box-shadow-effect-img;
+            -webkit-box-shadow: $box-shadow-effect-img;
+            -moz-box-shadow: $box-shadow-effect-img;
         }
     }
 }
@@ -118,7 +120,7 @@
 
 
         & .about-section-content {
-            margin-top: 30px;
+            margin-top: 0px;
             display: flex;
             flex-direction: column;
             justify-content: center;

@@ -1,14 +1,16 @@
+@import '../../style/variables.scss';
+
 .button {
     padding: 10px 20px;
     border-radius: 12px;
-    background: #fff;
+    background: $white-color;
     border: none;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 14px 0px;
+    box-shadow: $box-shadow-effect-btn;
 }
 
 .button.bgColor {
-    background-color: rgb(150, 92, 255);
+    background-color: $primary-blue-color-rga-btn;
 }
 
 @media(max-width:430px) {

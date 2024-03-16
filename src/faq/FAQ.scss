@@ -1,0 +1,177 @@
+@import '../style/variables.scss';
+
+.fqa {
+    width: auto;
+    background: $secondary-black-color;
+    display: flex;
+    // flex-direction: row;
+    justify-content: center;
+    padding: 30px;
+    // align-items: center;
+
+    & .fqa-container {
+        background: $secondary-black-color;
+        display: flex;
+        flex-direction: row;
+        // justify-content: center;
+        // align-items: center;
+        width: 75%;
+        padding: 50px 30px;
+        gap: 50px;
+        // height: auto;
+
+        & .fqa-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px 0;
+            width: 30%;
+
+            & .fqa-content-title {
+                color: $white-color;
+                font-size: 36px;
+            }
+
+            & .fqa-content-description {
+                color: $white-color;
+                font-size: 24px;
+                font-weight: 400;
+                opacity: 0.7;
+            }
+        }
+
+        & .fqa-container-questions {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 60%;
+            // align-items: center;
+
+            & .fqa-section-ul {
+                list-style: none;
+
+                & .fqa-section-list {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin-bottom: 30px;
+
+                    & .fqa-section-title {
+                        color: $white-color;
+                        font-size: 21px;
+                        margin-bottom: 7px;
+                        font-weight: 400;
+                        // line-height: 1.6rem;
+                    }
+
+                    & .fqa-section-description {
+                        color: $white-color;
+                        font-size: 18px;
+                        opacity: 0.7;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:1025px) {
+    .fqa {
+
+        & .fqa-container {
+            width: 95%;
+
+            & .fqa-content {
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media(max-width:800px) {
+    .fqa {
+        width: auto;
+        justify-content: start;
+        padding: 30px;
+
+        & .fqa-container {
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            padding: 0px;
+            gap: 30px;
+
+            & .fqa-content {
+                width: auto;
+            }
+
+            & .fqa-container-questions {
+                width: auto;
+            }
+        }
+    }
+}
+
+@media(max-width:430px) {
+    .fqa {
+
+        padding: 20px;
+
+        & .fqa-container {
+            // background: $secondary-black-color;
+            // display: flex;
+            // flex-direction: row;
+            // // justify-content: center;
+            // // align-items: center;
+            // width: 75%;
+            // padding: 50px 30px;
+            // gap: 50px;
+            // height: auto;
+
+            & .fqa-content {
+                // display: flex;
+                // flex-direction: column;
+                // gap: 30px 0;
+                // width: 30%;
+
+                & .fqa-content-title {
+                    color: $white-color;
+                    font-size: 28px;
+                }
+
+                & .fqa-content-description {
+                    color: $white-color;
+                    font-size: 21px;
+                    font-weight: 400;
+                    opacity: 0.7;
+                }
+            }
+
+            & .fqa-container-questions {
+                // align-items: center;
+
+                & .fqa-section-ul {
+
+                    & .fqa-section-list {
+                        margin-bottom: 20px;
+
+                        & .fqa-section-title {
+                            color: $white-color;
+                            font-size: 21px;
+                            margin-bottom: 7px;
+                            font-weight: 400;
+                            // line-height: 1.6rem;
+                        }
+
+                        & .fqa-section-description {
+                            color: $white-color;
+                            font-size: 16px;
+                            opacity: 0.7;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

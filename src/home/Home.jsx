@@ -1,4 +1,3 @@
-import "./Home.scss";
 import { About } from "./components/about";
 import { Banner } from "./components/banner";
 import { Clients } from "./components/clients";

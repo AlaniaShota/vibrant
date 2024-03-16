@@ -1,7 +1,6 @@
-import { SectionTitle } from "../../../components";
-
-import "./Payload.scss";
 import { PayloadCard } from "./components";
+
+import { SectionTitle } from "../../../components";
 
 export const Payload = () => {
   return (

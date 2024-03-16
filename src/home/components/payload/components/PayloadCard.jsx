@@ -1,8 +1,8 @@
-import React from "react";
+import { Button } from "../../../../components";
 
 import "./PayloadCard.scss";
 
-import { Button } from "../../../../components";
+import { FcCheckmark } from "react-icons/fc";
 
 export const PayloadCard = () => {
   const payloadCardData = [
@@ -46,30 +46,48 @@ export const PayloadCard = () => {
                   ${item.price}
                   <span className="payload-mo">/mo</span>
                 </h1>
-                <Button bgColor="bgColor">
-                  <span className="btn-text btn">Try for Free</span>
+                <Button bgColor={item.id === 1 ? "bgColor" : null}>
+                  <span className={item.id === 1 ? "btn-text btn" : 'btn-text'}>Try for Free</span>
                 </Button>
               </div>
             </div>
             <ul className="payload-section-about">
               <li className="payload-section-list">
+                <span>
+                  <FcCheckmark />
+                </span>
                 <h3 className="payload-text">{item.designs}</h3>
               </li>
               <li className="payload-section-list">
+                <span>
+                  <FcCheckmark />
+                </span>
                 <h3 className="payload-text">{item.deliverables}</h3>
               </li>
               <li className="payload-section-list">
+                <span>
+                  <FcCheckmark />
+                </span>
                 <h3 className="payload-text">{item.revisions}</h3>
               </li>
               {item.code && (
                 <>
                   <li className="payload-section-list">
+                    <span>
+                      <FcCheckmark />
+                    </span>
                     <h3 className="payload-text">{item.code}</h3>
                   </li>
                   <li className="payload-section-list">
+                    <span>
+                      <FcCheckmark />
+                    </span>
                     <h3 className="payload-text">{item.support}</h3>
                   </li>
                   <li className="payload-section-list">
+                    <span>
+                      <FcCheckmark />
+                    </span>
                     <h3 className="payload-text">{item.mentor}</h3>
                   </li>
                 </>
