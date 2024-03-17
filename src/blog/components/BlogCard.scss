@@ -5,28 +5,23 @@
     flex: 0 0 auto;
     gap: 20px;
     grid-auto-rows: min-content;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: repeat(2, minmax(500px, 1fr));
+    grid-template-rows: repeat(3, max-content);
     height: min-content;
     justify-content: center;
     max-width: auto;
     padding: 0px;
-    // position: relative;
-    // transform: perspective(1200px);
+
     width: 75%;
 
     & .card-section {
         display: flex;
         flex-direction: column;
-        // flex-wrap: wrap;
         justify-content: space-between;
-        // flex-grow: 2;
         align-items: center;
         width: auto;
-        // background: $card-background-color;
         border-radius: 30px;
         border: 1px solid $secondary-black-color;
-        // height: 50vh;
 
 
         & .card-section-img-content {
@@ -49,11 +44,9 @@
     & .card-section-title {
         display: flex;
         flex-direction: column;
-        // flex-wrap: wrap;
         padding: 40px;
         border-radius: 0 0 30px 30px;
         justify-content: flex-start;
-        // align-items: center;
 
         background: $card-background-color;
         width: 100%;
@@ -68,10 +61,62 @@
 
         & .card-title-second {
             color: $white-color;
-            // text-align: start;
             font-size: 18px;
             font-weight: 400;
             opacity: 0.7;
         }
     }
+}
+
+@media (min-width: 2459px) {
+
+    .blog-section {
+        padding: 150px 250px;
+    }
+
+}
+
+@media(max-width:1025px) {
+    .card-container {
+
+        gap: 15px;
+        width: 85%;
+    }
+}
+
+@media(max-width:1025px) {
+    .card-container {
+        gap: 10px;
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+        grid-template-rows: repeat(3, max-content);
+        width: 95%;
+
+        & .card-section {
+            width: auto;
+
+            & .card-section-img-content {
+                width: 100%;
+            }
+        }
+
+        & .card-section-title {
+            padding: 20px;
+
+            & .card-title {
+                font-size: 21px;
+            }
+
+            & .card-title-second {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media(max-width:430px) {
+    .card-container {
+        gap: 30px;
+        grid-template-columns: repeat(1, minmax(auto, 1fr));
+    }
+
 }
