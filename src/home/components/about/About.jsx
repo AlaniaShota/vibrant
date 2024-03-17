@@ -17,7 +17,7 @@ export const About = () => {
     <div ref={ref} className="about-section">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
-        animate={inView ? { opacity: 1, y: 0 } : {opacity: 0, y: 100}}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
         transition={{ duration: 1 }}
         className="about-section-content"
       >
@@ -33,7 +33,7 @@ export const About = () => {
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
-        animate={inView ? { opacity: 1, y: 0 } : {opacity: 0, y: 100}}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 1 }}
         className="about-img-overview"
       >
