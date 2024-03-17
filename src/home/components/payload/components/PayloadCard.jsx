@@ -3,8 +3,14 @@ import { Button } from "../../../../components";
 import "./PayloadCard.scss";
 
 import { FcCheckmark } from "react-icons/fc";
-
+import { motion } from "framer-motion";
+import { useRef } from "react";
+import { useInView } from "react-intersection-observer";
 export const PayloadCard = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.5,
+  });
   const payloadCardData = [
     {
       id: 1,
@@ -30,8 +36,13 @@ export const PayloadCard = () => {
   ];
 
   return (
-    <div className="payload">
-      <div className="payload-container">
+    <div ref={ref} className="payload">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 1 }}
+        className="payload-container"
+      >
         {payloadCardData.map((item) => (
           <div key={item.id} className="payload-card-content">
             <div className="payload-section">
@@ -97,7 +108,7 @@ export const PayloadCard = () => {
             </ul>
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
