@@ -1,0 +1,10 @@
+@import '../style/variables.scss';
+
+.blog-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    // padding: 0 550px;
+    background: $secondary-black-color;
+}

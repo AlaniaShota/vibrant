@@ -1,0 +1,83 @@
+@import '../../style/variables.scss';
+
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background: $secondary-black-color;
+
+    & .post-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+
+        & .post-section-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 70px;
+
+
+            & .post-section-title {
+                text-align: center;
+                color: $white-color;
+                font-size: 46px;
+                font-weight: 700;
+            }
+
+            & .post-section-second-title {
+                color: $white-color;
+                font-weight: 400;
+                font-size: 21px;
+                margin: 30px 0;
+                opacity: 0.7;
+            }
+
+            & .post-section-data {
+                color: $white-color;
+                opacity: 0.5;
+            }
+        }
+
+        & .post-section-img {
+            width: 95%;
+            height: 80vh;
+            margin: 30px 0;
+
+            & .post-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 30px;
+            }
+        }
+
+        & .post-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            width: 75%;
+
+            & .post-title {
+                color: $white-color;
+                font-weight: 600;
+                font-size: 22px;
+                margin-bottom: 13px;
+            }
+
+            & .post-text {
+                color: $white-color;
+                font-size: 18px;
+                font-weight: 400;
+                margin-bottom: 15px;
+                opacity: 0.7;
+            }
+        }
+    }
+}

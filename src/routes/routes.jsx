@@ -3,6 +3,8 @@ import { FAQ } from "../faq";
 import { Blog } from "../blog";
 import { Layout } from "../components/Layout";
 
+import { SinglePage } from "../blog/components";
+
 import { createBrowserRouter } from "react-router-dom";
 
 export const routes = createBrowserRouter([
@@ -18,6 +20,7 @@ export const routes = createBrowserRouter([
         path: "/blog",
         element: <Blog />,
       },
+      { path: "/blog/:id", element: <SinglePage /> },
     ],
   },
 ]);

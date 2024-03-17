@@ -47,7 +47,9 @@ export const PayloadCard = () => {
                   <span className="payload-mo">/mo</span>
                 </h1>
                 <Button bgColor={item.id === 1 ? "bgColor" : null}>
-                  <span className={item.id === 1 ? "btn-text btn" : 'btn-text'}>Try for Free</span>
+                  <span className={item.id === 1 ? "btn-text btn" : "btn-text"}>
+                    Try for Free
+                  </span>
                 </Button>
               </div>
             </div>

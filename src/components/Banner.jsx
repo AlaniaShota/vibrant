@@ -1,6 +1,7 @@
-import bannerImg from "../../../assets/img/uuIOyWfEyv64PXBpwme44mnxURA.webp";
-import "./Banner.scss";
-import { Button } from "../../../components";
+import { Button } from "./Button";
+
+import bannerImg from "../assets/img/uuIOyWfEyv64PXBpwme44mnxURA.webp";
+import "./style/Banner.scss";
 
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";

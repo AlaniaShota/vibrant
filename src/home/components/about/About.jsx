@@ -17,13 +17,6 @@ export const About = () => {
         transition={{ duration: 1 }}
         className="about-section-content"
       >
-        {/* <h1 className="about-title">
-          Open your first crypto wallet, right now!
-        </h1>
-        <p className="about-description">
-          Vibrant is the best software platform to easily capture user feed back
-          for your brand and products.
-        </p> */}
         <SectionTitle
           styleAbout="styleAbout"
           sectionTitle="Open your first crypto wallet, right now!"
