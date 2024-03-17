@@ -6,13 +6,18 @@ import { Button, SectionTitle } from "../../../components";
 import { motion } from "framer-motion";
 
 import "./About.scss";
+import { useInView } from "react-intersection-observer";
 
 export const About = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.5,
+  });
   return (
-    <motion.div className="about-section">
+    <div ref={ref} className="about-section">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={inView ? { opacity: 1, y: 0 } : {opacity: 0, y: 100}}
         transition={{ duration: 1 }}
         className="about-section-content"
       >
@@ -28,7 +33,7 @@ export const About = () => {
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={inView ? { opacity: 1, y: 0 } : {opacity: 0, y: 100}}
         transition={{ duration: 1 }}
         className="about-img-overview"
       >
@@ -36,6 +41,6 @@ export const About = () => {
         <img src={paid} alt="Error" className="paid-img" />
         <img src={user} alt="Error" className="user-img" />
       </motion.div>
-    </motion.div>
+    </div>
   );
 };

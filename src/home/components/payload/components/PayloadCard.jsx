@@ -4,7 +4,6 @@ import "./PayloadCard.scss";
 
 import { FcCheckmark } from "react-icons/fc";
 import { motion } from "framer-motion";
-import { useRef } from "react";
 import { useInView } from "react-intersection-observer";
 export const PayloadCard = () => {
   const [ref, inView] = useInView({
@@ -38,8 +37,8 @@ export const PayloadCard = () => {
   return (
     <div ref={ref} className="payload">
       <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
+        initial={{ opacity: 0, y: 30 }}
+        animate={inView ? { opacity: 1, y: 0 } : {opacity: 0, y: 30}}
         transition={{ duration: 1 }}
         className="payload-container"
       >
