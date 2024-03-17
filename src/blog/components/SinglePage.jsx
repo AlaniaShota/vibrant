@@ -173,7 +173,6 @@ export const SinglePage = () => {
             </>
           )}
         </div>
-        {/* Render other data fields as needed */}
       </motion.div>
     </div>
   );

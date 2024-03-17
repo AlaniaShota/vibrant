@@ -1,5 +1,4 @@
 import overview from "../../../assets/img/Pzrx2TCfEuPtWYzxPCANNXexA.webp";
-import overviewSecond from "../../../assets/img/Pzrx2TCfEuPtWYzxPCANNXexA.png";
 import paid from "../../../assets/img/invoicing.726e44e3.jpg";
 import user from "../../../assets/img/mIsg7QBdpgJuZAJYdalsMEbyX50.jpg";
 import { Button, SectionTitle } from "../../../components";

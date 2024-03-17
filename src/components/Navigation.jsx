@@ -56,7 +56,6 @@ export const HamburgerMenu = () => {
           }}
           transition={{ duration: 0.2 }}
           style={{ originY: 0.55 }}
-          // className=""
         >
           <svg width="15" height="15" viewBox="0 0 20 20">
             <path d="M0 7 L 20 7 L 10 16" />

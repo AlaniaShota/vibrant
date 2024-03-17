@@ -4,21 +4,16 @@
     width: auto;
     background: $secondary-black-color;
     display: flex;
-    // flex-direction: row;
     justify-content: center;
     padding: 30px;
-    // align-items: center;
 
     & .fqa-container {
         background: $secondary-black-color;
         display: flex;
         flex-direction: row;
-        // justify-content: center;
-        // align-items: center;
         width: 75%;
         padding: 50px 30px;
         gap: 50px;
-        // height: auto;
 
         & .fqa-content {
             display: flex;
@@ -44,7 +39,6 @@
             flex-direction: column;
             justify-content: center;
             width: 60%;
-            // align-items: center;
 
             & .fqa-section-ul {
                 list-style: none;
@@ -60,7 +54,6 @@
                         font-size: 21px;
                         margin-bottom: 7px;
                         font-weight: 400;
-                        // line-height: 1.6rem;
                     }
 
                     & .fqa-section-description {
@@ -118,21 +111,8 @@
         padding: 20px;
 
         & .fqa-container {
-            // background: $secondary-black-color;
-            // display: flex;
-            // flex-direction: row;
-            // // justify-content: center;
-            // // align-items: center;
-            // width: 75%;
-            // padding: 50px 30px;
-            // gap: 50px;
-            // height: auto;
 
             & .fqa-content {
-                // display: flex;
-                // flex-direction: column;
-                // gap: 30px 0;
-                // width: 30%;
 
                 & .fqa-content-title {
                     color: $white-color;
@@ -148,7 +128,6 @@
             }
 
             & .fqa-container-questions {
-                // align-items: center;
 
                 & .fqa-section-ul {
 
@@ -160,7 +139,6 @@
                             font-size: 21px;
                             margin-bottom: 7px;
                             font-weight: 400;
-                            // line-height: 1.6rem;
                         }
 
                         & .fqa-section-description {

@@ -127,9 +127,6 @@ export const Clients = () => {
       animate={inView ? "visible" : "hidden"}
       className="clients-section"
     >
-      {/* <div className="clients-section-header">
-        <h1 className="clients-section-title">What people say</h1>
-      </div> */}
       <SectionTitle sectionTitle="What people say" />
       <div className="clients-container">
         {clientsData.map((item) => (

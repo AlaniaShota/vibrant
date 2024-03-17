@@ -8,7 +8,6 @@
     & .payload-container {
         display: flex;
         justify-content: center;
-        // align-items: center;
         align-content: flex-start;
         flex-direction: row;
         gap: 30px;
@@ -16,7 +15,6 @@
         margin: 10px 0;
 
         & .payload-card-content {
-            // width: 75%;
             height: min-content;
             display: flex;
             flex-direction: column;
@@ -42,7 +40,6 @@
 
                     & .payload-section-title {
                         font-size: 30px;
-                        // font-weight: 600;
                     }
                 }
 

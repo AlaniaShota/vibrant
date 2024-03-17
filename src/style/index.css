@@ -7,18 +7,6 @@
   font-optical-sizing: auto;
 }
 
-body {
-  /* background-image: linear-gradient(
-    to bottom,
-    #403f44,
-    #383640,
-    #2f2c3b,
-    #272437,
-    #1e1b32
-  ); */
-  /* background: #0e0c16; */
-}
-
 a {
   text-decoration: none !important;
   color: #000 !important;
@@ -33,9 +21,3 @@ a {
 .btn-text.btn {
   color: rgb(255, 255, 255);
 }
-
-/* @media (min-width: 2459px) {
-  body {
-    padding: 0 250px;
-  }
-} */
