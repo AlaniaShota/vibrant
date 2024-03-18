@@ -16,8 +16,9 @@ import { useInView } from "react-intersection-observer";
 export const Clients = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0,
   });
+  console.log("InView:", inView);
   const clientsData = [
     {
       id: 1,
@@ -106,8 +107,8 @@ export const Clients = () => {
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.4,
+        delayChildren: 0.2,
+        staggerChildren: 0.3,
       },
     },
   };

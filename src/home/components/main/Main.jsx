@@ -5,6 +5,7 @@ import thirdImg from "../../../assets/img/fjGUpM9ZY4PmH5dABmnZKBYy7A.webp";
 import { useInView } from "react-intersection-observer";
 import { AnimatePresence, motion } from "framer-motion";
 import "./Main.scss";
+
 export const Main = () => {
   const data = [
     {
