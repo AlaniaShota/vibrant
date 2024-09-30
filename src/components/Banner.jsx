@@ -16,7 +16,7 @@ export const Banner = () => {
     <div ref={ref} className="banner">
       <motion.div
         animate={{ scale: inView ? 1 : 0, opacity: inView ? 1 : 0 }}
-        transition={{ type: "spring", stiffness: 30, damping: 20 }}
+        transition={{ type: "spring", stiffness: 40, damping: 30 }}
         className="banner-section"
       >
         <div className="banner-section-about">

@@ -11,6 +11,7 @@ const links = [
   { id: 2, name: "FAQ", link: "/faq" },
   { id: 3, name: "BLOG", link: "/blog" },
 ];
+
 export const Navigation = () => {
   return (
     <div className="navigation-section">

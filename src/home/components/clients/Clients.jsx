@@ -18,7 +18,7 @@ export const Clients = () => {
     triggerOnce: true,
     threshold: 0,
   });
-  console.log("InView:", inView);
+  
   const clientsData = [
     {
       id: 1,

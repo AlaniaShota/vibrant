@@ -5,7 +5,7 @@
     background: $secondary-black-color;
     display: flex;
     justify-content: center;
-    padding: 30px;
+    height: 100vh;
 
     & .fqa-container {
         background: $secondary-black-color;
@@ -37,7 +37,7 @@
         & .fqa-container-questions {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: start;
             width: 60%;
 
             & .fqa-section-ul {

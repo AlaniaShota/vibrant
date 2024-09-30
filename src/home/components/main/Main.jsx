@@ -54,7 +54,7 @@ const MainItem = ({ item }) => {
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       exit={{ opacity: 0, y: 30 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.8 }}
       className="main-content"
     >
       <div className="main-about">
