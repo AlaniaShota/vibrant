@@ -2,14 +2,19 @@ import { Home } from "../home";
 import { FAQ } from "../faq";
 import { Blog } from "../blog";
 import { Layout } from "../components/Layout";
-
+import { ScrollToTop } from "../components/ScrollToTop";
 import { SinglePage } from "../blog/components";
 
 import { createBrowserRouter } from "react-router-dom";
 
+
 export const routes = createBrowserRouter([
   {
-    element: <Layout />,
+    element: (  <>
+                  <Layout />
+                  <ScrollToTop/>
+                </>
+              ),
     children: [
       { path: "/", element: <Home /> },
       {
