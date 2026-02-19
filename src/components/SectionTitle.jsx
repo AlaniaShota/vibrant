@@ -4,29 +4,27 @@ export const SectionTitle = ({
   sectionTitle,
   sectionDescription,
   styleAbout,
-}) => {
-  return (
-    <div
-      className={`${styleAbout ? "section-title-about styleAbout" : "section-title"}`}
+}) => (
+  <div
+    className={`${styleAbout ? "section-title-about styleAbout" : "section-title"}`}
+  >
+    <h1
+      className={`${
+        styleAbout ? "section-title-about styleAbout" : "section-title-title"
+      }`}
     >
-      <h1
+      {sectionTitle}
+    </h1>
+    {sectionDescription ? (
+      <p
         className={`${
-          styleAbout ? "section-title-about styleAbout" : "section-title-title"
+          styleAbout
+            ? "section-description-about styleAbout"
+            : "section-title-description"
         }`}
       >
-        {sectionTitle}
-      </h1>
-      {sectionDescription ? (
-        <p
-          className={`${
-            styleAbout
-              ? "section-description-about styleAbout"
-              : "section-title-description"
-          }`}
-        >
-          {sectionDescription}
-        </p>
-      ) : null}
-    </div>
-  );
-};
+        {sectionDescription}
+      </p>
+    ) : null}
+  </div>
+);

@@ -5,14 +5,12 @@ import { Payload } from "./components/payload";
 
 import { Banner } from "../components";
 
-export const Home = () => {
-  return (
-    <>
-      <About />
-      <Main />
-      <Banner />
-      <Clients />
-      <Payload />
-    </>
-  );
-};
+export const Home = () => (
+  <>
+    <About />
+    <Main />
+    <Banner />
+    <Clients />
+    <Payload />
+  </>
+);

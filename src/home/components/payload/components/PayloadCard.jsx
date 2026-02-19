@@ -5,44 +5,22 @@ import "./PayloadCard.scss";
 import { FcCheckmark } from "react-icons/fc";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-export const PayloadCard = () => {
+
+export const PayloadCard = ({ payloadCard, price, buttonText }) => {
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0.5,
   });
-  const payloadCardData = [
-    {
-      id: 1,
-      title: "Personal",
-      description: "Best for brands that need designs on an ongoing basis.",
-      price: 2.99,
-      designs: "Request unlimited designs",
-      deliverables: "Deliverables as-you-need",
-      revisions: "No limit on revisions",
-    },
-    {
-      id: 2,
-      title: "Business",
-      description: "Best for brands that need designs on an ongoing basis.",
-      price: 9.99,
-      designs: "Request unlimited designs",
-      deliverables: "Deliverables as-you-need",
-      revisions: "No limit on revisions",
-      code: "No code needed",
-      support: "Individual help center",
-      mentor: "Your personal mentor",
-    },
-  ];
 
   return (
     <div ref={ref} className="payload">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
-        animate={inView ? { opacity: 1, y: 0 } : {opacity: 0, y: 30}}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.8 }}
         className="payload-container"
       >
-        {payloadCardData.map((item) => (
+        {payloadCard.map((item) => (
           <div key={item.id} className="payload-card-content">
             <div className="payload-section">
               <div className="payload-section-header">
@@ -53,12 +31,13 @@ export const PayloadCard = () => {
               </div>
               <div className="payload-section-main">
                 <h1 className="payload-price">
-                  ${item.price}
-                  <span className="payload-mo">/mo</span>
+                  {price.currency}
+                  {item.price}
+                  <span className="payload-mo">{price.period}</span>
                 </h1>
                 <Button bgColor={item.id === 1 ? "bgColor" : null}>
                   <span className={item.id === 1 ? "btn-text btn" : "btn-text"}>
-                    Try for Free
+                    {buttonText}
                   </span>
                 </Button>
               </div>

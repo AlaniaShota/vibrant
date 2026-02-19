@@ -2,6 +2,8 @@ import overview from "../../../assets/img/Pzrx2TCfEuPtWYzxPCANNXexA.webp";
 import paid from "../../../assets/img/invoicing.726e44e3.jpg";
 import user from "../../../assets/img/mIsg7QBdpgJuZAJYdalsMEbyX50.jpg";
 import { Button, SectionTitle } from "../../../components";
+import { aboutData } from "../../../mockData/home/aboutData";
+import { uiText } from "../../../mockData/uiText";
 
 import { motion } from "framer-motion";
 
@@ -24,12 +26,11 @@ export const About = () => {
       >
         <SectionTitle
           styleAbout="styleAbout"
-          sectionTitle="Open your first crypto wallet, right now!"
-          sectionDescription=" Vibrant is the best software platform to easily capture user feed back
-          for your brand and products."
+          sectionTitle={aboutData.title}
+          sectionDescription={aboutData.description}
         />
         <Button bgColor="bgColor">
-          <span className="btn-text btn">Get for Free</span>
+          <span className="btn-text btn">{uiText.buttonText}</span>
         </Button>
       </motion.div>
       <motion.div

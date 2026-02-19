@@ -1,5 +1,7 @@
 import { Button, Logo, Navigation, HamburgerMenu, Footer } from "./index";
 
+import { uiText } from "../mockData/uiText";
+
 import { motion } from "framer-motion";
 import { Outlet } from "react-router-dom";
 import "./style/Layout.scss";
@@ -40,7 +42,7 @@ export const Layout = () => {
                 <div className="navigation-content">
                   <Navigation />
                   <Button>
-                    <span className="btn-text">Get for Free</span>
+                    <span className="btn-text">{uiText.buttonText}</span>
                   </Button>
                 </div>
               </div>
@@ -51,9 +53,7 @@ export const Layout = () => {
       <section>
         <Outlet />
       </section>
-      <>
-        <Footer />
-      </>
+      <Footer />
     </>
   );
 };

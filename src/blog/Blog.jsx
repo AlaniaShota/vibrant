@@ -2,17 +2,16 @@ import { BlogCard } from "./components";
 
 import { Banner, SectionTitle } from "../components";
 import "./Blog.scss";
+import { blogData } from "../mockData/blog/blogData";
 
-export const Blog = () => {
-  return (
-    <div className="blog-section">
-      <SectionTitle
-        sectionTitle="Blog"
-        sectionDescription="Find all of our latest stories and subscribe to our newsletter for more."
-        styleAbout="styleAbout"
-      />
-      <BlogCard />
-      <Banner />
-    </div>
-  );
-};
+export const Blog = () => (
+  <div className="blog-section">
+    <SectionTitle
+      sectionTitle={blogData.sectionTitle}
+      sectionDescription={blogData.sectionDescription}
+      styleAbout="styleAbout"
+    />
+    <BlogCard blogData={blogData.blogs} />
+    <Banner />
+  </div>
+);

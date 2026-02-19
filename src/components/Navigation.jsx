@@ -1,30 +1,24 @@
 import { Logo } from "./Logo";
 
+import { uiText } from "../mockData/uiText";
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./style/Navigation.scss";
 import "./style/HamburgerMenu.scss";
 
-const links = [
-  { id: 1, name: "HOME", link: "/" },
-  { id: 2, name: "FAQ", link: "/faq" },
-  { id: 3, name: "BLOG", link: "/blog" },
-];
-
-export const Navigation = () => {
-  return (
-    <div className="navigation-section">
-      {links.map((item) => (
-        <div key={item.id}>
-          <Link to={item.link} className="link">
-            <span className="link-text">{item.name}</span>
-          </Link>
-        </div>
-      ))}
-    </div>
-  );
-};
+export const Navigation = () => (
+  <div className="navigation-section">
+    {uiText.links.map((item) => (
+      <div key={item.id}>
+        <Link to={item.link} className="link">
+          <span className="link-text">{item.name}</span>
+        </Link>
+      </div>
+    ))}
+  </div>
+);
 
 export const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -88,7 +82,7 @@ export const HamburgerMenu = () => {
         className="hamburger-menu-ul"
       >
         <motion.li variants={itemVariants} className="hamburger-menu-list">
-          {links.map((item) => (
+          {uiText.links.map((item) => (
             <div key={item.id}>
               <Link to={item.link} className="link">
                 <span className="link-text">{item.name}</span>

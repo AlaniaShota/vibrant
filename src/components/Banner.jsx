@@ -1,5 +1,7 @@
 import { Button } from "./Button";
 
+import { uiText } from "../mockData/uiText";
+
 import bannerImg from "../assets/img/uuIOyWfEyv64PXBpwme44mnxURA.webp";
 import "./style/Banner.scss";
 
@@ -27,15 +29,13 @@ export const Banner = () => {
         className="banner-section"
       >
         <div className="banner-section-about">
-          <h1 className="banner-section-title">
-            Download the app and start today!
-          </h1>
+          <h1 className="banner-section-title">{uiText.download}</h1>
           <div>
             <Button bgColor="bgColor">
-              <span className="btn-text btn">Get for Free</span>
+              <span className="btn-text btn">{uiText.buttonText}</span>
             </Button>
           </div>
-          <span className="banner-span-text">*No credit card requires</span>
+          <span className="banner-span-text">{uiText.creditCard}</span>
         </div>
         <div className="banner-img-content">
           <img
