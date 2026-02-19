@@ -15,8 +15,15 @@ export const Banner = () => {
   return (
     <div ref={ref} className="banner">
       <motion.div
-        animate={{ scale: inView ? 1 : 0, opacity: inView ? 1 : 0 }}
-        transition={{ type: "spring", stiffness: 40, damping: 30 }}
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{
+          scale: inView ? 1 : 1.1,
+          opacity: inView ? 1 : 1,
+        }}
+        transition={{
+          type: "tween",
+          duration: 0.8,
+        }}
         className="banner-section"
       >
         <div className="banner-section-about">
